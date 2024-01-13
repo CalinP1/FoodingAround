@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar";
-function Restaurants() {
+function Login() {
   return (
     <div>
       <Navbar />
-      Restaurants
+      HERE to log in
     </div>
   );
 }
 
-export default Restaurants;
+export default Login;

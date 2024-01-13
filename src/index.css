@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap");
+
+:root {
+  --background-color-primary: #edefe4;
+  --background-color-second: #e6cccd;
+  --main-color-primary: #b790b6;
+  --main-color-second: #c7b9e2;
+  --default-button: #c3d8ae;
+  --main-text: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  background-color: var(--background-color-primary);
+  color: var(--main-text);
+  font-weight: 400;
+}
+.navlink:link,
+.navlink:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: var(--main-text);
+  font-weight: 800;
+}
