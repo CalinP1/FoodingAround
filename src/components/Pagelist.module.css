@@ -1,0 +1,29 @@
+.secondnav {
+  background-color: var(--background-color-second);
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  height: 8vh;
+}
+
+.secondnav ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.secondnav li {
+  padding: 25px 60px;
+  color: var(--main-text);
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.secondnav li:hover {
+  border-style: solid;
+  letter-spacing: 6px;
+  border-radius: 3rem;
+  padding: 25px 80px;
+  border-color: var(--background-color-primary);
+}
