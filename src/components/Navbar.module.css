@@ -27,7 +27,7 @@
   justify-content: space-between;
   align-items: center;
 }
-p {
+.brandname {
   font-size: 44px;
   letter-spacing: 6px;
   font-weight: 700;
@@ -39,10 +39,6 @@ p {
 img {
   height: 10rem;
   transition: all 0.3s;
-}
-
-.nav img:hover {
-  transform: rotatez(-9deg);
 }
 
 .account:hover {

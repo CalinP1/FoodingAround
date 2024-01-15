@@ -8,11 +8,14 @@ function Navbar() {
         <ul>
           <li className={styles.logo}>
             <NavLink to="/" className="navlink">
-              <img src="../../images/logo-no-background - just-logo.png" />
+              <img
+                src="../../images/logo-no-background - just-logo.png"
+                alt="logo-site"
+              />
             </NavLink>
           </li>
           <li>
-            <p>FoodingAround</p>
+            <p className={styles.brandname}>FoodingAround</p>
           </li>
           <li className={styles.account}>
             <NavLink to="/login" className="navlink">

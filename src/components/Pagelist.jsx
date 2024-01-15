@@ -15,7 +15,7 @@ function Pagelist() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/recipes" className="navlink">
+          <NavLink to="/about" className="navlink">
             about
           </NavLink>
         </li>

@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
+import Footer from "../components/Footer";
 
 function Heropage() {
   return (
@@ -7,6 +8,7 @@ function Heropage() {
       <Navbar />
       <Pagelist />
       HELLLO!!!
+      <Footer />
     </div>
   );
 }
