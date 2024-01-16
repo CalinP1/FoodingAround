@@ -36,9 +36,8 @@
   cursor: default;
 }
 
-img {
+.logo img {
   height: 10rem;
-  transition: all 0.3s;
 }
 
 .account:hover {

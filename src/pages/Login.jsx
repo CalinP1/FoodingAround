@@ -1,9 +1,11 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 function Login() {
   return (
     <div>
       <Navbar />
-      HERE to log in
+
+      <Footer />
     </div>
   );
 }

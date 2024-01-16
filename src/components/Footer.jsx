@@ -3,9 +3,18 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <ul className={styles.sociallist}>
-        <li>email</li>
-        <li>linkedin</li>
-        <li>personal site</li>
+        <li className={styles.iconlist}>
+          <img src="../../images/mail-icon.png" />
+          <span>prostean.vasilecalin@gmail.com</span>
+        </li>
+        <li className={styles.iconlist}>
+          <img src="../../images/linkedin-icon.png" />
+          <span>www.linkedin.com/in/vasile-călin-proștean</span>
+        </li>
+        <li className={styles.iconlist}>
+          <img src="../../images/personal-site-icon.png" />
+          <span>-to-be-done-</span>
+        </li>
       </ul>
       <img
         src="../../images/logo-no-background.png"

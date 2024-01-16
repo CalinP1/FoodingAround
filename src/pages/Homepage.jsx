@@ -1,9 +1,12 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Pagelist from "../components/Pagelist";
 function Homepage() {
   return (
     <div>
       <Navbar />
-      Homepage
+      <Pagelist />
+      <Footer />
     </div>
   );
 }
