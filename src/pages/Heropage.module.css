@@ -4,10 +4,99 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0rem;
+  padding: 0rem 0rem 10rem;
 }
 .foodbanner {
   width: 100%;
-  height: 40rem;
-  object-fit: cover;
+  height: 55rem;
+  background-image: url("../../images/cooking-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodmoto {
+  background-color: var(--background-color-second);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5rem;
+  padding: 3rem;
+}
+
+.herodescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 13rem 50rem;
+}
+.herodescriptiontext {
+  font-size: 5rem;
+}
+
+.titleForLogIn {
+  font-size: 4rem;
+  padding: 4rem;
+  margin: 6rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  border-radius: 5rem;
+}
+
+.loginGuidanceHeroContainer {
+  background-color: var(--default-button);
+  border-radius: 5rem;
+  padding: 4rem;
+}
+.loginGuidanceHero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  width: 120rem;
+}
+.loginGuidanceHero img {
+  border-radius: 5rem;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.253);
+  height: 45rem;
+  width: 60rem;
+}
+.logInExplanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  font-size: 4rem;
+}
+
+.createAnAccountButton {
+  padding: 2.5rem;
+  margin: 6rem;
+  font-size: 3.5rem;
+  background-color: var(--default-button);
+  border-radius: 5rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+.createAnAccountButton:hover {
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.678);
+  transform: translatey(2px);
+}
+
+.heroButton:link,
+.heroButton:visited {
+  text-decoration: none;
+  color: var(--main-text);
 }
