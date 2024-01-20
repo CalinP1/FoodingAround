@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function Heropage() {
   return (
-    <div>
+    <div className={styles.heroBody}>
       <Navbar />
       <Pagelist />
       <div className={styles.description}>
@@ -65,7 +65,7 @@ function Heropage() {
           </NavLink>
         </div>
       </div>
-      <Footer />
+      <Footer className={styles.footer} />
     </div>
   );
 }

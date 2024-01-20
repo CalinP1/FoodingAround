@@ -2,7 +2,7 @@
   background-color: var(--background-color-second);
   border-style: solid;
   border-color: var(--main-color-primary);
-  height: 6vh;
+  height: 9vh;
 }
 
 .secondnav ul {
@@ -16,7 +16,7 @@
 .secondnav li {
   padding: 25px 60px;
   color: var(--main-text);
-  transition: all 0.5s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
@@ -26,4 +26,10 @@
   border-radius: 3rem;
   padding: 13px 80px;
   border-color: var(--background-color-primary);
+}
+
+.secondnav a:global(.active) {
+  color: var(--background-color-primary);
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
 }

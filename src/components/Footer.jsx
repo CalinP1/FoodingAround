@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 function Footer() {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <ul className={styles.sociallist}>
         <li className={styles.iconlist}>
           <img src="../../images/mail-icon.png" />
@@ -24,7 +24,7 @@ function Footer() {
       <p className={styles.copyrighttext}>
         Copyright - Vasile-Calin Prostean - 2024
       </p>
-    </div>
+    </footer>
   );
 }
 

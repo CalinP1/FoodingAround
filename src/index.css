@@ -25,6 +25,8 @@ body {
   background-color: var(--background-color-primary);
   color: var(--main-text);
   font-weight: 400;
+  height: 100%;
+  width: 100%;
 }
 .navlink:link,
 .navlink:visited {
@@ -33,4 +35,8 @@ body {
   font-size: 1.7rem;
   color: var(--main-text);
   font-weight: 800;
+}
+
+.active {
+  color: pink;
 }
