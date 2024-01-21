@@ -1,5 +1,5 @@
 .navcontainer {
-  height: 12rem;
+  height: 12vh;
 }
 .nav {
   background-color: var(--main-color-primary);
