@@ -19,9 +19,12 @@ function Recipes() {
         <div className={styles.SearchAndDisplayContainer}>
           <div className={styles.searchConatiner}>
             <form className={styles.searchRecipeForm}>
-              <select>
-                <option className={styles.searchOptions}>By Ingredients</option>
-                <option className={styles.searchOptions}>By Nutrients</option>
+              <span className={styles.searchContainerFilterText}>
+                Filter recipes..
+              </span>
+              <select className={styles.selectSearchOptions}>
+                <option>By Ingredients</option>
+                <option>By Nutrients</option>
               </select>
               <input
                 className={styles.afterTheOptionInput}
@@ -34,15 +37,9 @@ function Recipes() {
             </button>
             <div className={styles.listRecipesByName}>
               <ul className={styles.recipeListAfterSearchForPreview}>
-                <li className={styles.recipeItemForPreview}>
-                  items after the search
-                </li>
-                <li className={styles.recipeItemForPreview}>
-                  items after the search
-                </li>
-                <li className={styles.recipeItemForPreview}>
-                  items after the search
-                </li>
+                <li>items after the search</li>
+                <li>items after the search</li>
+                <li>items after the search</li>
               </ul>
             </div>
           </div>

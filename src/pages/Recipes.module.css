@@ -30,17 +30,46 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .displayConatiner {
   background-color: red;
   width: 55%;
 }
-
 .searchRecipeForm {
   display: flex;
+  width: 80%;
+  height: 35%;
+  justify-content: space-around;
+  align-items: center;
+}
+.selectSearchOptions {
+  padding: 1.3vh;
+  border-radius: 5rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  font-weight: 700;
+}
+.searchContainerFilterText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.3rem;
+}
+.selectSearchOptions option {
+  font-size: 1.3vh;
+}
+.randomRecipeButton {
+  height: 5%;
+  margin: 6rem;
 }
 .listRecipesByName {
   background-color: aquamarine;
+  height: 45%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipeListAfterSearchForPreview {
+  font-size: 3rem;
 }
