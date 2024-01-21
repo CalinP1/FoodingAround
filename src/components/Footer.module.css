@@ -1,16 +1,15 @@
 .footer {
   bottom: 0;
-  left: 0;
   background-color: var(--main-color-second);
   display: flex;
-  height: 23vh;
+  height: 18rem;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 .logofooter {
-  height: 17rem;
+  height: 15rem;
 }
 
 .copyrighttext {
@@ -28,9 +27,9 @@
 }
 
 .sociallist li {
-  padding: 1.8rem;
   font-size: 2rem;
   font-weight: 800;
+  padding: 0.5rem;
 }
 
 .iconlist {

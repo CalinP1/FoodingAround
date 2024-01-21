@@ -61,7 +61,7 @@ function Heropage() {
         </div>
         <div className={styles.createAnAccountButton}>
           <NavLink to="/login" className={styles.heroButton}>
-            CREATE AN ACCOUNT NOW
+            Go to your account!
           </NavLink>
         </div>
       </div>

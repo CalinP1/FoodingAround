@@ -1,0 +1,46 @@
+.recipesBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vh;
+  width: 100%;
+  height: 90vh;
+}
+
+.recipesFirstHeader {
+  font-size: 5rem;
+}
+.recipesSecondHeader {
+  font-size: 3rem;
+  padding: 4rem;
+}
+
+.SearchAndDisplayContainer {
+  margin-top: 4vh;
+  width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchConatiner {
+  background-color: blue;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.displayConatiner {
+  background-color: red;
+  width: 55%;
+}
+
+.searchRecipeForm {
+  display: flex;
+}
+.listRecipesByName {
+  background-color: aquamarine;
+}

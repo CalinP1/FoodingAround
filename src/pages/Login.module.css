@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: 100vh;
   color: var(--main-text);
+  padding-bottom: 20rem;
 }
 .formContainer {
   display: flex;
@@ -17,7 +18,7 @@
 .inputLogin {
   width: 30vh;
   margin: 1vh;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 5rem;
   font-size: 2rem;
   font-weight: 700;
@@ -41,7 +42,7 @@
 .logInButton {
   width: 20vh;
   border-radius: 4rem;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 5rem;
   height: 4vh;
   color: var(--main-text);
@@ -53,6 +54,9 @@
   border-color: var(--main-color-primary);
   border-style: solid;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logInButton:hover {
