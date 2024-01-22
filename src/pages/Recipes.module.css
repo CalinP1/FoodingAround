@@ -25,7 +25,6 @@
 }
 
 .searchConatiner {
-  background-color: blue;
   width: 45%;
   height: 100%;
   display: flex;
@@ -39,12 +38,13 @@
 .searchRecipeForm {
   display: flex;
   width: 80%;
-  height: 35%;
+  height: 30%;
   justify-content: space-around;
   align-items: center;
 }
 .selectSearchOptions {
-  padding: 1.3vh;
+  padding: 1.2vh;
+  margin: 1rem;
   border-radius: 5rem;
   border-style: solid;
   border-color: var(--main-color-primary);
@@ -59,12 +59,10 @@
   font-size: 1.3vh;
 }
 .randomRecipeButton {
-  height: 5%;
   margin: 6rem;
 }
 .listRecipesByName {
-  background-color: aquamarine;
-  height: 45%;
+  height: 50%;
   width: 95%;
   display: flex;
   justify-content: center;
@@ -72,4 +70,34 @@
 }
 .recipeListAfterSearchForPreview {
   font-size: 3rem;
+}
+.afterTheOptionInput {
+  padding: 1vh;
+  border-radius: 5rem;
+  margin: 1rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+}
+
+.randomRecipeButton {
+  padding: 2vh;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+}
+
+.searchTheRecipeButton {
+  padding: 1.2vh;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  margin: 1rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
 }
