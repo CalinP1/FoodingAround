@@ -1,103 +1,83 @@
 .recipesBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 5vh;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10rem;
 }
 
 .recipesFirstHeader {
-  font-size: 5rem;
+  margin-top: 2rem;
+  font-size: 4rem;
+  padding: 2rem;
 }
 .recipesSecondHeader {
-  font-size: 3rem;
-  padding: 4rem;
+  font-size: 2.2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .SearchAndDisplayContainer {
-  margin-top: 4vh;
-  width: 80%;
-  height: 50vh;
+  height: 100vh;
+  width: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .searchConatiner {
-  width: 45%;
+  background-color: aquamarine;
   height: 100%;
+  width: 40%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
+
 .displayConatiner {
-  background-color: red;
-  width: 55%;
-}
-.searchRecipeForm {
+  background-color: coral;
+  height: 100%;
+  width: 60%;
   display: flex;
-  width: 80%;
-  height: 30%;
+  flex-direction: column;
+}
+.displayImageContainer {
+  height: 40%;
+  width: 100%;
+}
+.displayImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.displayConatinerLeftAndRight {
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.selectSearchOptions {
-  padding: 1.2vh;
-  margin: 1rem;
-  border-radius: 5rem;
-  border-style: solid;
-  border-color: var(--main-color-primary);
-  font-weight: 700;
-}
-.searchContainerFilterText {
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 1.3rem;
-}
-.selectSearchOptions option {
-  font-size: 1.3vh;
-}
-.randomRecipeButton {
-  margin: 6rem;
-}
-.listRecipesByName {
-  height: 50%;
-  width: 95%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.recipeListAfterSearchForPreview {
-  font-size: 3rem;
-}
-.afterTheOptionInput {
-  padding: 1vh;
-  border-radius: 5rem;
-  margin: 1rem;
-  border-style: solid;
-  border-color: var(--main-color-primary);
-}
 
-.randomRecipeButton {
-  padding: 2vh;
-  border-radius: 5rem;
+.displayContainerLeft {
+  height: 100%;
+  width: 30%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-weight: 700;
+  background-color: antiquewhite;
   font-size: 2rem;
-  border-style: solid;
-  border-color: var(--main-color-primary);
+  overflow: scroll;
 }
-
-.searchTheRecipeButton {
-  padding: 1.2vh;
-  font-size: 1.5rem;
-  border-radius: 5rem;
-  letter-spacing: 0.5rem;
-  font-weight: 700;
-  margin: 1rem;
-  border-style: solid;
-  border-color: var(--main-color-primary);
+.displayContainerLeft::-webkit-scrollbar {
+  display: none;
+}
+.displayContainerLeftContent {
+  padding: 2rem;
+}
+.displayContainerRight {
+  height: 100%;
+  width: 70%;
+  background-color: cornflowerblue;
 }

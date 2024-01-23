@@ -19,33 +19,60 @@ function Recipes() {
         <div className={styles.SearchAndDisplayContainer}>
           <div className={styles.searchConatiner}>
             <form className={styles.searchRecipeForm}>
-              <span className={styles.searchContainerFilterText}>
-                Filter recipes..
-              </span>
-              <select className={styles.selectSearchOptions}>
-                <option>By Ingredients</option>
-                <option>By Nutrients</option>
-              </select>
-              <input
-                className={styles.afterTheOptionInput}
-                placeholder="ex: pizza, chicken, garlic..."
-              ></input>
-              <button className={styles.searchTheRecipeButton}>Search</button>
+              <h3>*Search component Title*</h3>
+              <p>search component</p>
             </form>
-            <button className={styles.randomRecipeButton}>
-              Get a random recipe
-            </button>
-            <div className={styles.listRecipesByName}>
-              <ul className={styles.recipeListAfterSearchForPreview}>
-                <li>items after the search</li>
-                <li>items after the search</li>
-                <li>items after the search</li>
-              </ul>
-            </div>
           </div>
           <div className={styles.displayConatiner}>
-            <h3 className={styles.recipeDetails}>*Recipe Title*</h3>
-            <p> Here is the recipe component!!!</p>
+            <div className={styles.displayImageContainer}>
+              <img src="../../images/food-1.png" alt="recipe-image" />
+            </div>
+            <div className={styles.displayConatinerLeftAndRight}>
+              <div className={styles.displayContainerLeft}>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+                <p className={styles.displayContainerLeftContent}>text</p>
+              </div>
+              <div className={styles.displayContainerRight}>
+                Display container right
+              </div>
+            </div>
           </div>
         </div>
       </div>
