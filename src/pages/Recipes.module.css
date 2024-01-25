@@ -26,9 +26,7 @@
   justify-content: space-around;
   align-items: center;
 }
-
-.searchConatiner {
-  background-color: aquamarine;
+.containerForSearch {
   height: 100%;
   width: 40%;
   display: flex;
@@ -37,15 +35,19 @@
 }
 
 .displayConatiner {
-  background-color: coral;
   height: 100%;
   width: 60%;
   display: flex;
   flex-direction: column;
+  border-radius: 3rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  overflow: hidden;
 }
 .displayImageContainer {
   height: 40%;
   width: 100%;
+  border-bottom: 4px solid var(--main-color-primary);
 }
 .displayImageContainer img {
   width: 100%;
@@ -66,18 +68,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
+  border-right: 2px solid var(--main-color-primary);
+
   font-size: 2rem;
   overflow: scroll;
+  padding: 4rem;
 }
+.displayContainerRight::-webkit-scrollbar,
 .displayContainerLeft::-webkit-scrollbar {
   display: none;
 }
-.displayContainerLeftContent {
-  padding: 2rem;
-}
+
 .displayContainerRight {
+  padding: 4rem;
   height: 100%;
   width: 70%;
-  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  overflow: scroll;
 }
