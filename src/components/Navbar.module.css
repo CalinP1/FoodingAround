@@ -1,5 +1,5 @@
 .navcontainer {
-  height: 14vh;
+  height: 11vh;
 }
 .nav {
   background-color: var(--main-color-primary);
@@ -20,7 +20,7 @@
 }
 .account {
   background-color: var(--default-button);
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 5rem;
   border-style: solid;
   border-color: var(--background-color-primary);
@@ -35,8 +35,8 @@
   align-items: center;
 }
 .brandname {
-  font-size: 44px;
-  letter-spacing: 6px;
+  font-size: 4rem;
+  letter-spacing: 4px;
   font-weight: 700;
   color: var(--background-color-primary);
   text-shadow: 2px 2px 2px rgba(2, 2, 2, 0.692);
@@ -44,8 +44,8 @@
 }
 
 .logo img {
-  height: 15rem;
-  padding: 1.5rem;
+  height: 12rem;
+  padding: 1.3rem;
 }
 
 .account:hover {
