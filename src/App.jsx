@@ -5,7 +5,7 @@ import Homepage from "./pages/Homepage";
 import Heropage from "./pages/Heropage";
 import Pagenotfound from "./pages/Pagenotfound";
 import Login from "./pages/Login";
-import About from "./pages/About";
+import Wines from "./pages/Wines";
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +14,7 @@ function App() {
         <Route path="restaurants" element={<Restaurants />} />
         <Route path="recipes" element={<Recipes />} />
         <Route path="homepage" element={<Homepage />} />
-        <Route path="about" element={<About></About>} />
+        <Route path="wines" element={<Wines />} />
         <Route path="login" element={<Login />} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>

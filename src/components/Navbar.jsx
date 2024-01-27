@@ -6,17 +6,20 @@ function Navbar() {
     <div className={styles.navcontainer}>
       <nav className={styles.nav}>
         <ul>
-          <li className={styles.logo}>
-            <NavLink to="/" className="navlink">
-              <img
-                src="../../images/logo-no-background - just-logo.png"
-                alt="logo-site"
-              />
-            </NavLink>
-          </li>
-          <li>
-            <p className={styles.brandname}>FoodingAround</p>
-          </li>
+          <div className={styles.logoTitleContainer}>
+            <li className={styles.logo}>
+              <NavLink to="/" className="navlink">
+                <img
+                  src="../../images/foodingaround-high-resolution-logo-white-transparent.png"
+                  alt="logo-site"
+                />
+              </NavLink>
+            </li>
+            <li>
+              <h1 className={styles.brandname}>FoodingAround</h1>
+            </li>
+          </div>
+
           <li className={styles.account}>
             <NavLink to="/login" className="navlink">
               <div className={styles.accounticon}>

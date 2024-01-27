@@ -41,28 +41,6 @@ function RecipeSearch() {
             <span>Eastern European</span>
             <input type="checkbox" className={styles.checkboxCuisines} />
           </li>
-          <li className={styles.cuisineItem}>
-            <span>Middle eastern</span>
-            <input type="checkbox" className={styles.checkboxCuisines} />
-          </li>
-          <li className={styles.cuisineItem}>
-            <span>Middle eastern</span>
-            <input type="checkbox" className={styles.checkboxCuisines} />
-          </li>
-          <li className={styles.cuisineItem}>
-            <span>Middle eastern</span>
-            <input type="checkbox" className={styles.checkboxCuisines} />
-          </li>
-
-          <li className={styles.cuisineItem}>
-            <span>Middle eastern</span>
-            <input type="checkbox" className={styles.checkboxCuisines} />
-          </li>
-
-          <li className={styles.cuisineItem}>
-            <span>Middle eastern</span>
-            <input type="checkbox" className={styles.checkboxCuisines} />
-          </li>
         </ul>
         <input
           type="search"
