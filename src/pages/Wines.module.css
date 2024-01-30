@@ -6,3 +6,63 @@
   align-items: center;
   flex-direction: column;
 }
+.wineHeader {
+  font-size: 4rem;
+  padding: 2rem;
+}
+.wineFormContainer {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wineFormHeader {
+  font-size: 2rem;
+  padding-right: 5rem;
+}
+.wineFormInput {
+  width: 30vh;
+  height: 4vh;
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+  margin-right: 5rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  color: var(--main-text);
+}
+
+.wineFormButton {
+  width: 12vh;
+  height: 4vh;
+  border-radius: 2rem;
+  border-style: solid;
+  border-color: var(--main-color-primary);
+  background-color: var(v);
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--main-color-primary);
+  cursor: pointer;
+  box-shadow: 4px 4px 4px #17171725;
+  transition: all 0.2s;
+}
+
+.wineFormButton:hover {
+  color: var(--background-color-primary);
+  background-color: var(--main-color-primary);
+  border-color: var(--main-text);
+  box-shadow: 1px 1px 1px #171717b9;
+  transform: translateY(3px);
+}
+
+.wineComponentContainer {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  height: 100vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
