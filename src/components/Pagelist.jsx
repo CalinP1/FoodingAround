@@ -5,11 +5,6 @@ function Pagelist() {
     <nav className={styles.secondnav}>
       <ul>
         <li>
-          <NavLink to="/restaurants" className="navlink">
-            restaurants
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/recipes" className="navlink">
             recipes
           </NavLink>

@@ -2,31 +2,31 @@
   background-color: var(--background-color-second);
   border-style: solid;
   border-color: var(--main-color-primary);
-  height: 7vh;
+  height: 6vh;
 }
 
 .secondnav ul {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   list-style: none;
+  margin-left: 2vh;
 }
 
 .secondnav li {
-  padding: 2rem 6rem;
+  padding: 2vh 6vh;
   color: var(--main-text);
-  transition: all 0.6s;
+  transition: all 0.3s;
   cursor: pointer;
   letter-spacing: 0.2rem;
+  font-size: 2.5vh;
+  font-weight: 700;
 }
 
 .secondnav li:hover {
-  letter-spacing: 0.9rem;
   color: var(--background-color-primary);
   text-decoration: underline;
-  padding: 1rem;
-  transform: translatey(4px);
 }
 
 .secondnav a:global(.active) {

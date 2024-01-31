@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import PersonIcon from "@mui/icons-material/Person";
+
+import LogInDefault from "./LogInDefault";
 function Navbar() {
   return (
     <div className={styles.navcontainer}>
@@ -19,14 +20,8 @@ function Navbar() {
               <h1 className={styles.brandname}>FoodingAround</h1>
             </li>
           </div>
-
           <li className={styles.account}>
-            <NavLink to="/login" className="navlink">
-              <div className={styles.accounticon}>
-                <span>Log in</span>
-                <PersonIcon fontSize="large" />
-              </div>
-            </NavLink>
+            <LogInDefault />
           </li>
         </ul>
       </nav>
