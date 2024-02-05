@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
 import styles from "./Recipes.module.css";
 import RecipeSearch from "../components/RecipeSearch";
+import { Outlet } from "react-router-dom";
 
 function Recipes() {
   return (
@@ -32,6 +33,7 @@ function Recipes() {
               <div className={styles.displayContainerRight}>
                 Display container right
               </div>
+              <Outlet />
             </div>
           </div>
         </div>

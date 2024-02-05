@@ -11,13 +11,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Heropage />} />
+        <Route index element={<Heropage />} />
         <Route path="recipes" element={<Recipes />} />
         <Route path="homepage" element={<Homepage />} />
         <Route path="wines" element={<Wines />} />
         <Route path="login" element={<Login />} />
         <Route path="account" element={<AccountPage />} />
-        <Route path="favorites " element={<Favorites />} />
+        <Route path="favorites" element={<Favorites />}>
+          <Route path="recipes" element={<p>Recipes</p>} />
+          <Route path="wines" element={<p>Wines</p>} />
+        </Route>
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
     </BrowserRouter>

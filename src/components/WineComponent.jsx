@@ -1,43 +1,36 @@
 import styles from "./WineComponent.module.css";
-function WineComponent() {
+function WineComponent({ containerData }) {
+  const { pairedWines, pairingText, pairingTitle, pairingImage, productPrice } =
+    { ...containerData };
+
+  if (!pairingText) {
+    return (
+      <div className={styles.placeHolderContainer}>
+        <h2>Your meal is waiting for your search</h2>
+        <img alt="wine-placeholder" src="../../images/wine.png" />
+      </div>
+    );
+  }
   return (
     <div className={styles.wineComponentMain}>
       <div className={styles.wineMainContainer}>
         <div className={styles.wineMainContainerLeft}>
           <div className={styles.wineLeftPaired}>
-            <ul className={styles.wineLeftPairedList}>
-              <li>merlot</li>
-              <li>cabernet sauvignon</li>
-              <li>pinot noir</li>
-            </ul>
+            <p className={styles.wineLeftPairedList}>{pairedWines}</p>
           </div>
           <div className={styles.wineLeftPairedDescription}>
-            <p>
-              Merlot, Cabernet Sauvignon, and Pinot Noir are my top picks for
-              Steak. After all, beef and red wine are a classic combination.
-              Generally, leaner steaks go well with light or medium-bodied reds,
-              such as pinot noir or merlot, while fattier steaks can handle a
-              bold red, such as cabernet sauvingnon. The Sterling Vineyards
-              Merlot with a 5 out of 5 star rating seems like a good match. It
-              costs about 29 dollars per bottle.
-            </p>
+            <p>{pairingText}</p>
           </div>
         </div>
         <div className={styles.wineMainContainerRight}>
           <div className={styles.containerRightImage}>
-            <img
-              src="https://spoonacular.com/productImages/428278-312x231.jpg"
-              alt="wine-image"
-            />
+            <img src={pairingImage} alt="wine-image" />
           </div>
           <div className={styles.containerRightDescription}>
-            <h2 className={styles.descriptionTitle}>
-              Sterling Vineyards Merlot
-            </h2>
-            <p className={styles.descriptionRating}>
-              Rating: 5 <span></span>
+            <h2 className={styles.descriptionTitle}>{pairingTitle}</h2>
+            <p className={styles.descriptionPrice}>
+              ${parseFloat(productPrice).toFixed(2)}
             </p>
-            <p className={styles.descriptionPrice}>$28.99</p>
           </div>
         </div>
       </div>
