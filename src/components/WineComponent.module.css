@@ -83,6 +83,7 @@
 
 .containerRightImage img {
   height: 70%;
+  max-width: 100%;
   object-fit: cover;
   width: auto;
 }

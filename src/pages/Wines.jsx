@@ -10,21 +10,27 @@ function About() {
   const [foodSearch, setfoodSearch] = useState("");
   const [containerData, setContainerData] = useState({});
   const [change, setChange] = useState(false);
+  const [searchValid, setSearchValid] = useState(true);
   function handelSubmit(e) {
     e.preventDefault();
-    console.log(foodSearch);
     setChange(!change);
+    setSearchValid(true);
   }
 
   function workingData(data) {
-    setContainerData((containerData) => ({
-      ...containerData,
-      pairedWines: data.pairedWines,
-      pairingText: data.pairingText,
-      pairingTitle: data.productMatches[0].title,
-      pairingImage: data.productMatches[0].imageUrl,
-      productPrice: data.productMatches[0].price.slice(1),
-    }));
+    if (data.productMatches && data.productMatches.length > 0) {
+      setContainerData((containerData) => ({
+        ...containerData,
+        pairedWines: data.pairedWines,
+        pairingText: data.pairingText,
+        pairingTitle: data.productMatches[0].title,
+        pairingImage: data.productMatches[0].imageUrl,
+        productPrice: data.productMatches[0].price.slice(1),
+      }));
+    } else {
+      setContainerData({});
+      setSearchValid(false);
+    }
   }
   //pairedWines, pairingText, productMatches.title, productMatches.imageUrl, productMatches.price
   useEffect(
@@ -36,9 +42,8 @@ function About() {
           );
           const data = await res.json();
           workingData(data);
-          console.log(data);
         } catch {
-          throw new Error("EROAREEE");
+          throw new Error("error");
         }
       }
       if (change) {
@@ -70,7 +75,10 @@ function About() {
           <button className={styles.wineFormButton}>search</button>
         </form>
         <div className={styles.wineComponentContainer}>
-          <WineComponent containerData={containerData} />
+          <WineComponent
+            containerData={containerData}
+            searchValid={searchValid}
+          />
         </div>
       </div>
       <Footer />

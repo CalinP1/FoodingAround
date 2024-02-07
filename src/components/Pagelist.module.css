@@ -17,7 +17,7 @@
 .secondnav li {
   padding: 2vh 6vh;
   color: var(--main-text);
-  transition: all 0.3s;
+  transition: all 0.1s;
   cursor: pointer;
   letter-spacing: 0.2rem;
   font-size: 2.5vh;

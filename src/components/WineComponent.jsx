@@ -1,8 +1,13 @@
+import ErrorComponent from "./ErrorComponent";
 import styles from "./WineComponent.module.css";
-function WineComponent({ containerData }) {
+import { PropTypes } from "prop-types";
+function WineComponent({ containerData, searchValid }) {
   const { pairedWines, pairingText, pairingTitle, pairingImage, productPrice } =
     { ...containerData };
 
+  if (!searchValid) {
+    return <ErrorComponent />;
+  }
   if (!pairingText) {
     return (
       <div className={styles.placeHolderContainer}>
@@ -37,5 +42,14 @@ function WineComponent({ containerData }) {
     </div>
   );
 }
-
+WineComponent.propTypes = {
+  containerData: PropTypes.shape({
+    pairedWines: PropTypes.string,
+    pairingText: PropTypes.string,
+    pairingTitle: PropTypes.string,
+    pairingImage: PropTypes.string,
+    productPrice: PropTypes.string,
+  }),
+  searchValid: PropTypes.bool,
+};
 export default WineComponent;
