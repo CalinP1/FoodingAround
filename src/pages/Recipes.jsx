@@ -134,7 +134,7 @@ function Recipes() {
                 Reset
               </button>
             </div>
-            <RecipesListGeneratedComponent />
+            <RecipesListGeneratedComponent linkState={linkConstruct} />
           </div>
 
           <RecipeDisplay />
