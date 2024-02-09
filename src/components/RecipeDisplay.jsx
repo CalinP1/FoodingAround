@@ -9,9 +9,7 @@ function RecipeDisplay() {
         <div className={styles.displayContainerLeft}>
           <p>text</p>
         </div>
-        <div className={styles.displayContainerRight}>
-          Display container right
-        </div>
+        <div className={styles.displayContainerRight}></div>
       </div>
     </div>
   );

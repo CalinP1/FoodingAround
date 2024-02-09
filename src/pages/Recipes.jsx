@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
 import RecipeDisplay from "../components/RecipeDisplay";
+import RecipesListGeneratedComponent from "../components/RecipesListGeneratedComponent";
 import styles from "./Recipes.module.css";
 
 function Recipes() {
@@ -20,26 +21,26 @@ function Recipes() {
           You can search by cuisine, ingredients, nutrients and calories
         </h2>
         <div className={styles.SearchAndDisplayContainer}>
-          <div className={styles.containerForSearch}>
-            <div className={styles.searchConatiner}>
-              <form
-                onSubmit={handleSubmit}
-                className={styles.formSearchContainer}
-              >
-                <ul className={styles.cuisinesList}>
-                  <li className={styles.cuisineItem}>
-                    <span>Eastern European</span>
-                    <input
-                      type="checkbox"
-                      className={styles.checkboxCuisines}
-                    />
-                  </li>
-                </ul>
-                <input
-                  type="search"
-                  placeholder="hmm..."
-                  className={styles.inputContainer}
-                />
+          <div className={styles.searchConatiner}>
+            <form
+              onSubmit={handleSubmit}
+              className={styles.formSearchContainer}
+            >
+              <ul className={styles.cuisinesList}>
+                <li className={styles.cuisineItem}>
+                  <span>Eastern European</span>
+                  <input type="checkbox" className={styles.checkboxCuisines} />
+                </li>
+              </ul>
+              <div className={styles.descriptionsContainer}>
+                <div>
+                  <span>Search based on ingredients</span>
+                  <input
+                    type="search"
+                    placeholder="hmm..."
+                    className={styles.inputContainer}
+                  />
+                </div>
                 <div>
                   <span>Max calories per portion?</span>
                   <input type="search" placeholder="ex:300" />
@@ -61,12 +62,11 @@ function Recipes() {
                     <option>Rich in fiber</option>
                   </select>
                 </div>
-              </form>
-              <div className={styles.containerRecipesDisplay}>
-                <p>list of recipes</p>
               </div>
-            </div>
+            </form>
+            <RecipesListGeneratedComponent />
           </div>
+
           <RecipeDisplay />
         </div>
       </div>

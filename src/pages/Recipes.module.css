@@ -21,15 +21,37 @@
 
 .SearchAndDisplayContainer {
   height: 100vh;
-  width: 85%;
+  width: 90vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.containerForSearch {
-  height: 100%;
-  width: 40%;
+
+.searchConatiner {
+  height: 90%;
+  width: 40vw;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: aquamarine;
+  margin: 2vh;
+}
+
+.formSearchContainer {
+  height: 50%;
+  width: 100%;
+}
+.cuisinesList {
+  height: 10%;
+  width: 100%;
+}
+.descriptionsContainer {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: blanchedalmond;
   align-items: center;
 }
