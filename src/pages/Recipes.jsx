@@ -18,7 +18,7 @@ function reducer(state, action) {
       return { ...state, ingredients: action.payload };
     }
     case "calories": {
-      return { ...state, calories: `maxCalories${action.payload}` };
+      return { ...state, calories: action.payload };
     }
     case "specialRequest": {
       return { ...state, specialRequest: action.payload };
@@ -42,18 +42,23 @@ function Recipes() {
   useEffect(() => {
     console.log(linkConstruct);
   }, [linkConstruct]);
+
   function createLink() {
     setLinkConstruct(BASE_URL);
+
     setLinkConstruct((prevLinkConstruct) => {
-      return (
-        prevLinkConstruct +
-        "&" +
-        `${state.ingredients}` +
-        "&" +
-        `${state.calories}` +
-        "&" +
-        `${state.specialRequest}`
-      );
+      let newLink = prevLinkConstruct;
+
+      if (ingredients !== "") {
+        newLink += `&${ingredients}`;
+      }
+      if (calories !== "") {
+        newLink += `&maxCalories=${calories}`;
+      }
+      if (specialRequest !== "") {
+        newLink += `&${specialRequest}`;
+      }
+      return newLink;
     });
   }
   function handleSubmit(e) {
