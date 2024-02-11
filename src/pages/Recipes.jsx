@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
@@ -36,32 +36,26 @@ const BASE_URL =
 function Recipes() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [linkConstruct, setLinkConstruct] = useState(BASE_URL);
-
+  const [submited, setSubmited] = useState(false);
   const { ingredients, calories, specialRequest } = state;
-
-  useEffect(() => {
-    console.log(linkConstruct);
-  }, [linkConstruct]);
 
   function createLink() {
     setLinkConstruct(BASE_URL);
+    let newLink = BASE_URL;
 
-    setLinkConstruct((prevLinkConstruct) => {
-      let newLink = prevLinkConstruct;
-
-      if (ingredients !== "") {
-        newLink += `&${ingredients}`;
-      }
-      if (calories !== "") {
-        newLink += `&maxCalories=${calories}`;
-      }
-      if (specialRequest !== "") {
-        newLink += `&${specialRequest}`;
-      }
-      return newLink;
-    });
+    if (ingredients !== "") {
+      newLink += `&query=${ingredients}`;
+    }
+    if (calories !== "") {
+      newLink += `&maxCalories=${calories}`;
+    }
+    if (specialRequest !== "") {
+      newLink += `&${specialRequest}`;
+    }
+    setLinkConstruct(newLink);
   }
   function handleSubmit(e) {
+    setSubmited(true);
     e.preventDefault();
     createLink();
   }
@@ -77,6 +71,7 @@ function Recipes() {
   }
   function reset() {
     dispatch({ type: "reset" });
+    setSubmited(false);
   }
   return (
     <div>
@@ -134,7 +129,9 @@ function Recipes() {
                 Reset
               </button>
             </div>
-            <RecipesListGeneratedComponent linkState={linkConstruct} />
+            {submited && (
+              <RecipesListGeneratedComponent linkState={linkConstruct} />
+            )}
           </div>
 
           <RecipeDisplay />
