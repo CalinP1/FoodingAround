@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./RecipesListGeneratedComponent.module.css";
 import { PropTypes } from "prop-types";
 
-function RecipesListGeneratedComponent({ linkState }) {
+function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
   const [recipesObject, setRecipesObject] = useState([]);
 
   useEffect(
@@ -28,7 +28,7 @@ function RecipesListGeneratedComponent({ linkState }) {
     <div className={styles.containerRecipesDisplay}>
       <ul className={styles.listComponent}>
         {Object.values(recipesObject).map((recipe) => (
-          <li key={recipe.id} onClick={() => console.log(`hei ${recipe.id}`)}>
+          <li key={recipe.id} onClick={() => setClickedRecipe(recipe.id)}>
             {recipe.title}
           </li>
         ))}
@@ -38,5 +38,6 @@ function RecipesListGeneratedComponent({ linkState }) {
 }
 RecipesListGeneratedComponent.propTypes = {
   linkState: PropTypes.string,
+  setClickedRecipe: PropTypes.func,
 };
 export default RecipesListGeneratedComponent;

@@ -38,6 +38,7 @@ function Recipes() {
   const [linkConstruct, setLinkConstruct] = useState(BASE_URL);
   const [submited, setSubmited] = useState(false);
   const { ingredients, calories, specialRequest } = state;
+  const [clickedRecipe, setClickedRecipe] = useState();
 
   function createLink() {
     setLinkConstruct(BASE_URL);
@@ -130,11 +131,14 @@ function Recipes() {
               </button>
             </div>
             {submited && (
-              <RecipesListGeneratedComponent linkState={linkConstruct} />
+              <RecipesListGeneratedComponent
+                linkState={linkConstruct}
+                setClickedRecipe={setClickedRecipe}
+              />
             )}
           </div>
 
-          <RecipeDisplay />
+          <RecipeDisplay onClickedRecipe={clickedRecipe} />
         </div>
       </div>
       <Footer />
