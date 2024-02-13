@@ -18,6 +18,8 @@ function RecipeDisplay({ onClickedRecipe }) {
             }
             const data = await res.json();
             console.log(data);
+            setIngredientsList(data.extendedIngredients);
+            setCookingSteps(data.analyzedInstructions[0].steps);
           } catch (err) {
             console.log("Error!", err);
           }
@@ -36,10 +38,18 @@ function RecipeDisplay({ onClickedRecipe }) {
       <div className={styles.displayConatinerLeftAndRight}>
         <div className={styles.displayContainerLeft}>
           <div className={styles.ingredientsContainer}>
-            <p>{onClickedRecipe}</p>
+            <p>s</p>
+            <p>
+              ssdagaasdsafa ssdagaasdsafassdagaasdsafassdagaasdsafassdagaasdsafa
+            </p>
+            <p>s</p>
           </div>
         </div>
-        <div className={styles.displayContainerRight}></div>
+        <div className={styles.displayContainerRight}>
+          <div className={styles.cookingStepsContainer}>
+            <p>a</p>
+          </div>
+        </div>
       </div>
     </div>
   );

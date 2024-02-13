@@ -147,11 +147,11 @@ function Recipes() {
               )}
             </div>
           </div>
-          <div className={styles.recipeDisplayContainer}>
-            <RecipeDisplay
-              onClickedRecipe={clickedRecipe}
-              style={{ display: submited ? "block" : "none" }}
-            />
+          <div
+            className={styles.recipeDisplayContainer}
+            style={{ display: clickedRecipe ? "block" : "none" }}
+          >
+            <RecipeDisplay onClickedRecipe={clickedRecipe} />
           </div>
         </div>
       </div>

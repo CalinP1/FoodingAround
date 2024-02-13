@@ -14,7 +14,6 @@ function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
             throw new Error("Failed to fetch recipes");
           }
           const data = await res.json();
-          console.log(data);
           setRecipesObject(data.results);
         } catch (error) {
           console.error("Error fetching data:", error);
