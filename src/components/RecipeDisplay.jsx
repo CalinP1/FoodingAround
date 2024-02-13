@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./RecipeDisplay.module.css";
 import { PropTypes } from "prop-types";
 
 function RecipeDisplay({ onClickedRecipe }) {
+  const [ingredientsList, setIngredientsList] = useState([]);
+  const [cookingSteps, setCookingSteps] = useState([]);
   useEffect(
     function () {
       async function recipeDisplayIngredients() {
@@ -21,24 +23,8 @@ function RecipeDisplay({ onClickedRecipe }) {
           }
         }
       }
-      async function recipeDisplaySteps() {
-        if (onClickedRecipe) {
-          try {
-            const res = await fetch(
-              `https://api.spoonacular.com/recipes/${onClickedRecipe}/analyzedInstructions?apiKey=39e199267dc14acc94501a7d7793d279`
-            );
-            if (!res.ok) {
-              throw new Error("Failed to fetch recipes");
-            }
-            const data = await res.json();
-            console.log(data);
-          } catch (err) {
-            console.log("Error!", err);
-          }
-        }
-      }
+
       recipeDisplayIngredients();
-      recipeDisplaySteps();
     },
     [onClickedRecipe]
   );
@@ -49,7 +35,9 @@ function RecipeDisplay({ onClickedRecipe }) {
       </div>
       <div className={styles.displayConatinerLeftAndRight}>
         <div className={styles.displayContainerLeft}>
-          <p>{onClickedRecipe}</p>
+          <div className={styles.ingredientsContainer}>
+            <p>{onClickedRecipe}</p>
+          </div>
         </div>
         <div className={styles.displayContainerRight}></div>
       </div>

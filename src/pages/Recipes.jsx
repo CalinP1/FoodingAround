@@ -31,7 +31,7 @@ function reducer(state, action) {
   }
 }
 const BASE_URL =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=39e199267dc14acc94501a7d7793d279";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=39e199267dc14acc94501a7d7793d279&number=50";
 
 function Recipes() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -73,6 +73,7 @@ function Recipes() {
   function reset() {
     dispatch({ type: "reset" });
     setSubmited(false);
+    setClickedRecipe(null);
   }
   return (
     <div>
@@ -126,19 +127,32 @@ function Recipes() {
               </div>
             </form>
             <div className={styles.buttonsContainer}>
-              <button className={styles.buttonsRecipe} onClick={reset}>
+              <button
+                className={styles.buttonsRecipe}
+                onClick={reset}
+                style={{ display: submited ? "block" : "none" }}
+              >
                 Reset
               </button>
             </div>
-            {submited && (
-              <RecipesListGeneratedComponent
-                linkState={linkConstruct}
-                setClickedRecipe={setClickedRecipe}
-              />
-            )}
+            <div
+              className={styles.recipeListGeneratorContainer}
+              style={{ display: submited ? "block" : "none" }}
+            >
+              {submited && (
+                <RecipesListGeneratedComponent
+                  linkState={linkConstruct}
+                  setClickedRecipe={setClickedRecipe}
+                />
+              )}
+            </div>
           </div>
-
-          <RecipeDisplay onClickedRecipe={clickedRecipe} />
+          <div className={styles.recipeDisplayContainer}>
+            <RecipeDisplay
+              onClickedRecipe={clickedRecipe}
+              style={{ display: submited ? "block" : "none" }}
+            />
+          </div>
         </div>
       </div>
       <Footer />
