@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
-import LogInDefault from "./LogInDefault";
 function Navbar() {
   return (
     <div className={styles.navcontainer}>
@@ -20,9 +19,6 @@ function Navbar() {
               <h1 className={styles.brandname}>FoodingAround</h1>
             </li>
           </div>
-          <li className={styles.account}>
-            <LogInDefault />
-          </li>
         </ul>
       </nav>
     </div>
