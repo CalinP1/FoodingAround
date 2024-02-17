@@ -5,6 +5,8 @@ import { PropTypes } from "prop-types";
 function RecipeDisplay({ onClickedRecipe }) {
   const [ingredientsList, setIngredientsList] = useState([]);
   const [cookingSteps, setCookingSteps] = useState([]);
+  const [recipeImage, setRecipeImage] = useState("");
+  const [recipeTitle, setRecipeTitle] = useState("");
   useEffect(
     function () {
       async function recipeDisplayIngredients() {
@@ -17,9 +19,10 @@ function RecipeDisplay({ onClickedRecipe }) {
               throw new Error("Failed to fetch recipes");
             }
             const data = await res.json();
-            console.log(data);
             setIngredientsList(data.extendedIngredients);
             setCookingSteps(data.analyzedInstructions[0].steps);
+            setRecipeImage(data.image);
+            setRecipeTitle(data.title);
           } catch (err) {
             console.log("Error!", err);
           }
@@ -30,24 +33,35 @@ function RecipeDisplay({ onClickedRecipe }) {
     },
     [onClickedRecipe]
   );
+
   return (
     <div className={styles.displayConatiner}>
       <div className={styles.displayImageContainer}>
-        <img src="../../images/food-1.png" alt="recipe-image" />
+        <img src={recipeImage} alt="recipe-image" />
       </div>
       <div className={styles.displayConatinerLeftAndRight}>
         <div className={styles.displayContainerLeft}>
           <div className={styles.ingredientsContainer}>
-            <p>s</p>
-            <p>
-              ssdagaasdsafa ssdagaasdsafassdagaasdsafassdagaasdsafassdagaasdsafa
-            </p>
-            <p>s</p>
+            <ul className={styles.ingredientsContainerList}>
+              <h3>{recipeTitle}</h3>
+              {ingredientsList.map((ingredient) => (
+                <li key={ingredient.id}>
+                  <p>{ingredient.original}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className={styles.displayContainerRight}>
           <div className={styles.cookingStepsContainer}>
-            <p>a</p>
+            <ul className={styles.cookingStepsList}>
+              {cookingSteps.map((steps) => (
+                <li key={steps.number}>
+                  <h4>Step: {steps.number}</h4>
+                  <p>{steps.step}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

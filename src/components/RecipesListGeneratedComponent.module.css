@@ -5,6 +5,16 @@
   display: flex;
   justify-content: flex-start;
 }
+.containerNoRecipesDisplay {
+  height: 100%;
+  padding: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vh;
+  font-weight: 600;
+}
 .listComponent {
   height: 100%;
   width: 95%;

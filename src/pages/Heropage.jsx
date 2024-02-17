@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
 import Footer from "../components/Footer";
 import styles from "./Heropage.module.css";
-import { NavLink } from "react-router-dom";
 
 function Heropage() {
   return (
@@ -58,11 +57,6 @@ function Heropage() {
               experience using this site will look if you create an account
             </p>
           </div>
-        </div>
-        <div className={styles.createAnAccountButton}>
-          <NavLink to="/login" className={styles.heroButton}>
-            Go to your account!
-          </NavLink>
         </div>
       </div>
       <Footer className={styles.footer} />
