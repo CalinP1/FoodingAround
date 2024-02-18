@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./RecipeDisplay.module.css";
 import { PropTypes } from "prop-types";
+import Spinner from "./Spinner";
 
 function RecipeDisplay({ onClickedRecipe }) {
   const [ingredientsList, setIngredientsList] = useState([]);
   const [cookingSteps, setCookingSteps] = useState([]);
   const [recipeImage, setRecipeImage] = useState("");
   const [recipeTitle, setRecipeTitle] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(
     function () {
       async function recipeDisplayIngredients() {
@@ -23,8 +25,11 @@ function RecipeDisplay({ onClickedRecipe }) {
             setCookingSteps(data.analyzedInstructions[0].steps);
             setRecipeImage(data.image);
             setRecipeTitle(data.title);
+            setIsLoading(true);
           } catch (err) {
             console.log("Error!", err);
+          } finally {
+            setIsLoading(false);
           }
         }
       }
@@ -33,6 +38,10 @@ function RecipeDisplay({ onClickedRecipe }) {
     },
     [onClickedRecipe]
   );
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <div className={styles.displayConatiner}>
