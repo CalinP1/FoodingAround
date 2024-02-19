@@ -8,12 +8,13 @@ function RecipeDisplay({ onClickedRecipe }) {
   const [cookingSteps, setCookingSteps] = useState([]);
   const [recipeImage, setRecipeImage] = useState("");
   const [recipeTitle, setRecipeTitle] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(
     function () {
       async function recipeDisplayIngredients() {
         if (onClickedRecipe) {
           try {
+            setIsLoading(true);
             const res = await fetch(
               `https://api.spoonacular.com/recipes/${onClickedRecipe}/information?apiKey=39e199267dc14acc94501a7d7793d279`
             );
@@ -25,7 +26,6 @@ function RecipeDisplay({ onClickedRecipe }) {
             setCookingSteps(data.analyzedInstructions[0].steps);
             setRecipeImage(data.image);
             setRecipeTitle(data.title);
-            setIsLoading(true);
           } catch (err) {
             console.log("Error!", err);
           } finally {

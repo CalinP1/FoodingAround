@@ -11,7 +11,7 @@ function WineComponent({ containerData, searchValid }) {
   if (!pairingText) {
     return (
       <div className={styles.placeHolderContainer}>
-        <h2>Your meal is waiting for your search</h2>
+        <h2>Your meal is waiting for a partner</h2>
         <img alt="wine-placeholder" src="../../images/wine.png" />
       </div>
     );
@@ -21,7 +21,11 @@ function WineComponent({ containerData, searchValid }) {
       <div className={styles.wineMainContainer}>
         <div className={styles.wineMainContainerLeft}>
           <div className={styles.wineLeftPaired}>
-            <p className={styles.wineLeftPairedList}>{pairedWines}</p>
+            {pairedWines.map((wine, index) => (
+              <p key={index} className={styles.wineDisplay}>
+                {wine}
+              </p>
+            ))}
           </div>
           <div className={styles.wineLeftPairedDescription}>
             <p>{pairingText}</p>

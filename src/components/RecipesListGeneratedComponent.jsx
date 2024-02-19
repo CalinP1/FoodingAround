@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "./RecipesListGeneratedComponent.module.css";
 import { PropTypes } from "prop-types";
-import Spinner from "./Spinner";
 
 function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
   const [recipesObject, setRecipesObject] = useState([]);
   const [invalidSearch, setInvalidSearch] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   useEffect(
     function () {
@@ -24,8 +22,6 @@ function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
           }
         } catch (error) {
           console.error("Error fetching data:", error);
-        } finally {
-          setLoading(false);
         }
       }
       fetchRecipes();
@@ -38,9 +34,6 @@ function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
         <p>No recipes found. Please refine your search criteria!</p>
       </div>
     );
-  }
-  if (loading) {
-    return <Spinner />;
   }
 
   return (

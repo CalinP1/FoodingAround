@@ -32,7 +32,7 @@ function About() {
       setSearchValid(false);
     }
   }
-  //pairedWines, pairingText, productMatches.title, productMatches.imageUrl, productMatches.price
+
   useEffect(
     function () {
       async function fetchWine() {
@@ -41,6 +41,7 @@ function About() {
             `${BASE_URL}?apiKey=39e199267dc14acc94501a7d7793d279&food=${foodSearch}`
           );
           const data = await res.json();
+          console.log(data.pairedWines);
           workingData(data);
         } catch {
           throw new Error("error");
