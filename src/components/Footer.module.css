@@ -41,3 +41,35 @@
   height: 3rem;
   padding-right: 2rem;
 }
+@media all and (max-width: 600px) {
+  .footer {
+    bottom: 0;
+    background-color: var(--main-color-second);
+    display: flex;
+    height: 50rem;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sociallist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sociallist li {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.7rem;
+  }
+  .iconlist {
+    cursor: default;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

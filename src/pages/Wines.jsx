@@ -68,7 +68,7 @@ function Wine() {
           </h3>
           <input
             type="search"
-            placeholder="ex: chicken, steak, italian.."
+            placeholder="ex:chicken, steak, italian.."
             className={styles.wineFormInput}
             value={foodSearch}
             onChange={(e) => setfoodSearch(e.target.value)}

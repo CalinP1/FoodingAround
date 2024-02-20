@@ -62,7 +62,7 @@
   border-radius: 2rem;
   border-style: solid;
   border-color: var(--main-color-primary);
-  background-color: var(v);
+  background-color: var(--background-color-primary);
   letter-spacing: 0.2rem;
   font-size: 2rem;
   text-align: center;
