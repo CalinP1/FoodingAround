@@ -20,3 +20,31 @@
   height: 40vh;
   width: 10vw;
 }
+
+@media all and (max-width: 600px) {
+  .errorMainContainer {
+    height: 80%;
+    width: 85%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50%;
+  }
+  .errorMessageContainer {
+    font-size: 3rem;
+  }
+  .errorImageContainer {
+    height: 35rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .errorImageContainer img {
+    height: 30rem;
+    width: 20rem;
+  }
+}
