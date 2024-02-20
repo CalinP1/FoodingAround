@@ -96,7 +96,7 @@
   margin-top: 15rem;
 }
 
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   .description {
     max-width: 100%;
   }
