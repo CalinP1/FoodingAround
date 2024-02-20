@@ -43,13 +43,6 @@
   padding: 3rem;
 }
 
-.wineLeftPairedList li {
-  padding: 3rem;
-  list-style: none;
-  font-size: 2vh;
-  text-decoration: underline;
-  text-decoration-color: var(--main-color-primary);
-}
 .wineLeftPairedDescription {
   height: 70%;
   width: 80%;
@@ -111,4 +104,126 @@
 }
 .placeHolderContainer h2 {
   font-size: 3vh;
+}
+
+@media all and (max-width: 600px) {
+  .placeHolderContainer {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .placeHolderContainer img {
+    height: 58vh;
+    padding-top: 5rem;
+  }
+  .placeHolderContainer h2 {
+    font-size: 3vh;
+  }
+  .wineComponentMain {
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wineMainContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-color-second);
+    padding: 1rem;
+    border-radius: 0rem;
+    border-style: groove;
+    border-color: var(--main-color-primary);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.212);
+  }
+
+  .wineMainContainerLeft {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.7rem;
+    color: var(--plain-white);
+  }
+
+  .wineLeftPaired {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 2rem;
+  }
+  .wineDisplay {
+    padding: 0.5rem;
+  }
+  .wineLeftPairedDescription {
+    height: 85%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    word-spacing: 0.1rem;
+  }
+  .wineMainContainerRight {
+    background-color: var(--plain-white);
+    height: 35rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-radius: 1.5rem;
+    border-color: var(--main-color-primary);
+  }
+  .containerRightImage {
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerRightImage img {
+    height: 90%;
+    max-width: 100%;
+    object-fit: cover;
+    width: auto;
+  }
+
+  .containerRightDescription {
+    background-color: var(--main-color-primary);
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    color: var(--plain-white);
+  }
+  .placeHolderContainer {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
