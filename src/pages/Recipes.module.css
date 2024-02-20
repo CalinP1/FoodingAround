@@ -141,12 +141,13 @@
 @media all and (max-width: 600px) {
   .recipesBody {
     width: 100%;
-    height: 140rem;
+    height: 160rem;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     overflow: hidden;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   .recipesFirstHeader {
@@ -156,7 +157,7 @@
     text-align: center;
   }
   .recipesSecondHeader {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     padding: 1rem 0.5rem;
     margin-bottom: 2rem;
     font-weight: 400;
@@ -260,7 +261,7 @@
   }
 
   .recipeListGeneratorContainer {
-    height: 40vh;
+    height: 25vh;
     background-color: var(--background-color-second);
     border-radius: 1.5rem;
     border-style: solid;
@@ -272,10 +273,10 @@
     width: 90%;
   }
   .recipeDisplayContainer {
-    height: 100rem;
+    height: 120rem;
     width: 100%;
     display: flex;
-    margin-top: 5rem;
+    margin-top: 3rem;
     flex-direction: column;
     border-radius: 1rem;
     border-style: solid;

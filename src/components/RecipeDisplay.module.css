@@ -84,3 +84,93 @@
 .cookingStepsList h4 {
   padding: 1rem;
 }
+@media all and (max-width: 600px) {
+  .displayConatiner {
+    height: 100%;
+  }
+  .displayImageContainer {
+    height: 35%;
+    width: 100%;
+    background-image: url(../../images/food-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .displayImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    backdrop-filter: blur(15px);
+  }
+  .displayConatinerLeftAndRight {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .displayContainerLeft {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid var(--main-color-primary);
+    font-size: 1.5rem;
+    overflow: scroll;
+  }
+  .displayContainerRight::-webkit-scrollbar,
+  .displayContainerLeft::-webkit-scrollbar {
+    display: none;
+  }
+
+  .displayContainerRight {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    overflow: scroll;
+  }
+  .cookingStepsContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .ingredientsContainer {
+    height: 100%;
+    width: 100%;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .ingredientsContainerList {
+    list-style: none;
+  }
+
+  .ingredientsContainerList h3 {
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .ingredientsContainerList p {
+    margin: 1.2rem;
+    font-weight: 600;
+  }
+  .cookingStepsList {
+    list-style: none;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  .cookingStepsList h4 {
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+}
