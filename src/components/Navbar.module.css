@@ -16,7 +16,7 @@
 .logoTitleContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .account {
   height: 4vh;
@@ -57,4 +57,14 @@
   background-color: var(--main-color-second);
   box-shadow: 0px 3px 3px rgb(0, 0, 0);
   transform: translateY(1px);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+}
+.navcontainer {
+  width: 100vw;
+}
+.logoTitleContainer {
+  width: 100vw;
+  font-size: 1rem;
 }

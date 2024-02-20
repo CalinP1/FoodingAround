@@ -6,7 +6,7 @@ import WineComponent from "../components/WineComponent";
 import styles from "./Wines.module.css";
 
 const BASE_URL = "https://api.spoonacular.com/food/wine/pairing";
-function About() {
+function Wine() {
   const [foodSearch, setfoodSearch] = useState("");
   const [containerData, setContainerData] = useState({});
   const [change, setChange] = useState(false);
@@ -86,4 +86,4 @@ function About() {
     </div>
   );
 }
-export default About;
+export default Wine;
