@@ -34,3 +34,29 @@
   font-size: 3rem;
   letter-spacing: 0.5rem;
 }
+
+@media all and (max-width: 600px) {
+  .secondnav {
+    height: 8rem;
+    width: 100%;
+  }
+  .secondnav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .secondnav li {
+    color: var(--main-text);
+    transition: all 0.1s;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .secondnav a:global(.active) {
+    color: var(--background-color-primary);
+    font-size: 2.3rem;
+  }
+}
