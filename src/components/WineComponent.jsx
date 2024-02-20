@@ -11,7 +11,7 @@ function WineComponent({ containerData, searchValid }) {
   if (!pairingText) {
     return (
       <div className={styles.placeHolderContainer}>
-        <h2>Your meal is waiting for a partner</h2>
+        <h2>Your meal is waiting for a partner!</h2>
         <img alt="wine-placeholder" src="../../images/wine.png" />
       </div>
     );
@@ -37,9 +37,7 @@ function WineComponent({ containerData, searchValid }) {
           </div>
           <div className={styles.containerRightDescription}>
             <h2 className={styles.descriptionTitle}>{pairingTitle}</h2>
-            <p className={styles.descriptionPrice}>
-              ${parseFloat(productPrice).toFixed(2)}
-            </p>
+            <p>${parseFloat(productPrice).toFixed(2)}</p>
           </div>
         </div>
       </div>

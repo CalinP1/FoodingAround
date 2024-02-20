@@ -18,7 +18,6 @@
   border-color: var(--main-color-primary);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
 }
-
 .wineMainContainerLeft {
   height: 90%;
   width: 60%;
@@ -28,6 +27,7 @@
   align-items: center;
   margin: 1rem;
   font-size: 2vh;
+  color: var(--plain-white);
 }
 .wineLeftPaired {
   height: 20%;
@@ -97,12 +97,13 @@
   align-items: center;
   text-align: center;
   font-size: 2vh;
+  color: var(--plain-white);
 }
 .placeHolderContainer {
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .placeHolderContainer img {

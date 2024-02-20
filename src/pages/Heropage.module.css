@@ -82,6 +82,7 @@
   height: 30%;
   padding: 5rem;
   font-size: 3rem;
+  color: var(--plain-white);
 }
 
 .credentials {

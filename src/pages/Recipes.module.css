@@ -10,13 +10,14 @@
 
 .recipesFirstHeader {
   margin-top: 2rem;
-  font-size: 4rem;
+  font-size: 5rem;
   padding: 2rem;
 }
 .recipesSecondHeader {
-  font-size: 2.2rem;
+  font-size: 4rem;
   padding: 2rem;
   margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .SearchAndDisplayContainer {
