@@ -21,20 +21,48 @@
   width: 10vw;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .errorMainContainer {
     height: 80%;
     width: 85%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin-bottom: 50%;
   }
   .errorMessageContainer {
     font-size: 3rem;
+  }
+  .errorImageContainer {
+    height: 35rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .errorImageContainer img {
+    height: 30rem;
+    width: 20rem;
+  }
+}
+
+@media all and (min-width: 651px) and (max-width: 1550px) {
+  .errorMainContainer {
+    height: 80%;
+    width: 85%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30%;
+  }
+  .errorMessageContainer {
+    font-size: 4rem;
   }
   .errorImageContainer {
     height: 35rem;

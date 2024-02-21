@@ -39,6 +39,7 @@ function Recipes() {
   const [submited, setSubmited] = useState(false);
   const { ingredients, calories, specialRequest } = state;
   const [clickedRecipe, setClickedRecipe] = useState();
+  const [wrongSearch, setWrongSearch] = useState(false);
 
   function createLink() {
     setLinkConstruct(BASE_URL);
@@ -139,10 +140,11 @@ function Recipes() {
               className={styles.recipeListGeneratorContainer}
               style={{ display: submited ? "block" : "none" }}
             >
-              {submited && (
+              {submited && !wrongSearch && (
                 <RecipesListGeneratedComponent
                   linkState={linkConstruct}
                   setClickedRecipe={setClickedRecipe}
+                  setWrongSearch={setWrongSearch}
                 />
               )}
             </div>

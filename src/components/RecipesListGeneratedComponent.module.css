@@ -31,7 +31,7 @@
   width: 100%;
   height: auto;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.9rem;
   cursor: pointer;
   border-radius: 3rem;
 }
@@ -40,7 +40,7 @@
   background-color: var(--default-button);
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .containerRecipesDisplay {
     height: 100%;
     padding: 1rem;
@@ -55,8 +55,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    text-align: center;
   }
   .listComponent {
     height: 100%;

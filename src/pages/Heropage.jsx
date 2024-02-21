@@ -20,7 +20,7 @@ function Heropage() {
             recipes and seamless wine pairing suggestions.
           </h2>
         </div>
-        <h3 className={styles.titleForLogIn}>
+        <h3 className={styles.titleForPresentation}>
           Discover the ultimate culinary experience with FoodinAround!
         </h3>
         <div className={styles.loginGuidanceHeroContainer}>

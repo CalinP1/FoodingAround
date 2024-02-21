@@ -84,7 +84,7 @@
 .cookingStepsList h4 {
   padding: 1rem;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .displayConatiner {
     height: 100%;
   }

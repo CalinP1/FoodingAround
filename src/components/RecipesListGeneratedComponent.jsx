@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import styles from "./RecipesListGeneratedComponent.module.css";
 import { PropTypes } from "prop-types";
 
-function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
+function RecipesListGeneratedComponent({
+  linkState,
+  setClickedRecipe,
+  setWrongSearch,
+}) {
   const [recipesObject, setRecipesObject] = useState([]);
   const [invalidSearch, setInvalidSearch] = useState(false);
 
@@ -29,6 +33,7 @@ function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
     [linkState]
   );
   if (invalidSearch) {
+    setWrongSearch(true);
     return (
       <div className={styles.containerNoRecipesDisplay}>
         <p>No recipes found. Please refine your search criteria!</p>
@@ -51,5 +56,6 @@ function RecipesListGeneratedComponent({ linkState, setClickedRecipe }) {
 RecipesListGeneratedComponent.propTypes = {
   linkState: PropTypes.string,
   setClickedRecipe: PropTypes.func,
+  setWrongSearch: PropTypes.func,
 };
 export default RecipesListGeneratedComponent;

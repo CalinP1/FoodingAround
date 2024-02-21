@@ -41,7 +41,7 @@
   height: 3rem;
   padding-right: 2rem;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .footer {
     bottom: 0;
     background-color: var(--main-color-second);
@@ -71,5 +71,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media all and (min-width: 650px) and (max-width: 1550px) {
+  .footer {
+    bottom: 0;
+    background-color: var(--main-color-second);
+    display: flex;
+    height: 40rem;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logofooter {
+    height: 15rem;
+  }
+
+  .copyrighttext {
+    color: var(--main-text);
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .sociallist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .sociallist li {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.5rem;
+  }
+
+  .iconlist {
+    cursor: default;
+    height: auto;
+  }
+
+  .iconlist img {
+    height: 3rem;
+    padding-right: 2rem;
   }
 }

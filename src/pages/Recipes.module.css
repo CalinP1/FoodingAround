@@ -30,7 +30,7 @@
 
 .searchConatiner {
   height: 90%;
-  width: 40vw;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -88,7 +88,7 @@
 }
 
 .baseSearch span {
-  font-size: 3vh;
+  font-size: 3rem;
 }
 
 .baseSearch input {
@@ -138,13 +138,13 @@
   border-color: var(--main-color-primary);
   overflow: hidden;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
   .recipesBody {
     width: 100%;
-    height: 160rem;
+    height: 180vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: first baseline;
     flex-direction: column;
     overflow: hidden;
     margin-bottom: 5rem;
@@ -159,31 +159,31 @@
   .recipesSecondHeader {
     font-size: 2.5rem;
     padding: 1rem 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     font-weight: 400;
     text-align: center;
   }
 
   .SearchAndDisplayContainer {
-    height: 70%;
+    height: 80%;
     width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .searchConatiner {
-    height: 100%;
+    height: 70%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
   }
 
   .formSearchContainer {
-    height: 35%;
+    height: 40%;
     width: 100%;
   }
   .descriptionsContainer {
@@ -195,14 +195,15 @@
     align-items: center;
   }
   .buttonsContainer {
-    height: 5rem;
+    height: 4rem;
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
   }
   .buttonsRecipe {
+    margin: 2rem;
     width: 12rem;
     height: 4rem;
     border-radius: 1rem;
@@ -241,7 +242,7 @@
   .baseSearch input {
     height: 3rem;
     width: 10rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     border-radius: 1rem;
     padding: 0rem 1rem;
     border-style: solid;
@@ -261,7 +262,7 @@
   }
 
   .recipeListGeneratorContainer {
-    height: 25vh;
+    height: 27vh;
     background-color: var(--background-color-second);
     border-radius: 1.5rem;
     border-style: solid;
@@ -271,12 +272,162 @@
     align-items: center;
     justify-content: space-around;
     width: 90%;
+    margin-top: 1rem;
   }
   .recipeDisplayContainer {
     height: 120rem;
     width: 100%;
     display: flex;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: var(--main-color-primary);
+    overflow: hidden;
+  }
+}
+
+@media all and (min-width: 651px) and (max-width: 1550px) {
+  .recipesBody {
+    width: 100%;
+    height: 180vh;
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+  .recipesFirstHeader {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  .recipesSecondHeader {
+    font-size: 2.5rem;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .SearchAndDisplayContainer {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .searchConatiner {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .formSearchContainer {
+    height: 40%;
+    width: 100%;
+  }
+  .descriptionsContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .buttonsContainer {
+    height: 4rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  .buttonsRecipe {
+    margin: 2rem;
+    width: 12rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: var(--main-color-primary);
+    background-color: var(--background-color-primary);
+    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--main-color-primary);
+    cursor: pointer;
+    box-shadow: 3px 3px 3px #17171725;
+    transition: all 0.2s;
+  }
+
+  .buttonsRecipe:hover {
+    color: var(--background-color-primary);
+    background-color: var(--main-color-primary);
+    border-color: var(--main-text);
+    box-shadow: 1px 1px 1px #171717b9;
+    transform: translateY(3px);
+  }
+  .baseSearch {
+    height: 8rem;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .baseSearch span {
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+
+  .baseSearch input {
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    padding: 0rem 1rem;
+    border-style: solid;
+    border-color: var(--main-color-primary);
+  }
+  .baseSearch select {
+    height: 3rem;
+    width: 20rem;
+    border-radius: 1rem;
+    font-size: 1.7vh;
+    border-style: solid;
+    border-color: var(--main-color-primary);
+  }
+
+  .baseSearch option {
+    font-size: 1.8rem;
+  }
+
+  .recipeListGeneratorContainer {
+    height: 27vh;
+    background-color: var(--background-color-second);
+    border-radius: 1.5rem;
+    border-style: solid;
+    border-color: var(--main-color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 1rem;
+  }
+  .recipeDisplayContainer {
+    height: 120rem;
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
     flex-direction: column;
     border-radius: 1rem;
     border-style: solid;
