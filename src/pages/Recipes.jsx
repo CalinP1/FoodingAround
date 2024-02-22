@@ -75,6 +75,7 @@ function Recipes() {
     dispatch({ type: "reset" });
     setSubmited(false);
     setClickedRecipe(null);
+    setWrongSearch(false);
   }
   return (
     <div>
@@ -147,14 +148,21 @@ function Recipes() {
                   setWrongSearch={setWrongSearch}
                 />
               )}
+              {submited && wrongSearch && (
+                <div className={styles.containerNoRecipesDisplay}>
+                  <p>No recipes found. Please refine your search criteria!</p>
+                </div>
+              )}
             </div>
           </div>
-          <div
-            className={styles.recipeDisplayContainer}
-            style={{ display: clickedRecipe ? "block" : "none" }}
-          >
-            <RecipeDisplay onClickedRecipe={clickedRecipe} />
-          </div>
+          {!wrongSearch && (
+            <div
+              className={styles.recipeDisplayContainer}
+              style={{ display: clickedRecipe ? "block" : "none" }}
+            >
+              <RecipeDisplay onClickedRecipe={clickedRecipe} />
+            </div>
+          )}
         </div>
       </div>
       <Footer />

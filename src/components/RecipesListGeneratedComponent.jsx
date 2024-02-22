@@ -21,6 +21,7 @@ function RecipesListGeneratedComponent({
           const data = await res.json();
           if (data.results.length === 0) {
             setInvalidSearch(true);
+            setWrongSearch(true);
           } else {
             setRecipesObject(data.results);
           }
@@ -30,10 +31,9 @@ function RecipesListGeneratedComponent({
       }
       fetchRecipes();
     },
-    [linkState]
+    [linkState, setWrongSearch]
   );
   if (invalidSearch) {
-    setWrongSearch(true);
     return (
       <div className={styles.containerNoRecipesDisplay}>
         <p>No recipes found. Please refine your search criteria!</p>

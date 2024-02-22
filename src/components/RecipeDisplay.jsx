@@ -53,8 +53,8 @@ function RecipeDisplay({ onClickedRecipe }) {
           <div className={styles.ingredientsContainer}>
             <ul className={styles.ingredientsContainerList}>
               <h3>{recipeTitle}</h3>
-              {ingredientsList.map((ingredient) => (
-                <li key={ingredient.id}>
+              {ingredientsList.map((ingredient, index) => (
+                <li key={`ingredient_${index}`}>
                   <p>{ingredient.original}</p>
                 </li>
               ))}
@@ -64,8 +64,8 @@ function RecipeDisplay({ onClickedRecipe }) {
         <div className={styles.displayContainerRight}>
           <div className={styles.cookingStepsContainer}>
             <ul className={styles.cookingStepsList}>
-              {cookingSteps.map((steps) => (
-                <li key={steps.number}>
+              {cookingSteps.map((steps, index) => (
+                <li key={`step_${index}`}>
                   <h4>Step: {steps.number}</h4>
                   <p>{steps.step}</p>
                 </li>
