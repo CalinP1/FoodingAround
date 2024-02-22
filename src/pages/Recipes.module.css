@@ -138,6 +138,17 @@
   border-color: var(--main-color-primary);
   overflow: hidden;
 }
+.containerNoRecipesDisplay {
+  height: 100%;
+  padding: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: 600;
+}
 @media all and (max-width: 650px) {
   .recipesBody {
     width: 100%;

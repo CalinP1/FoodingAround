@@ -16,7 +16,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              <sp className={styles.brandname}>FoodingAround</sp>
+              <span className={styles.brandname}>FoodingAround</span>
             </li>
           </div>
         </ul>
