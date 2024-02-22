@@ -134,8 +134,6 @@
   display: flex;
   flex-direction: column;
   border-radius: 3vh;
-  border-style: solid;
-  border-color: var(--main-color-primary);
   overflow: hidden;
 }
 .containerNoRecipesDisplay {
@@ -295,8 +293,6 @@
     margin-top: 2rem;
     flex-direction: column;
     border-radius: 1rem;
-    border-style: solid;
-    border-color: var(--main-color-primary);
     overflow: hidden;
   }
 }
