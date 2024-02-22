@@ -129,7 +129,7 @@
   align-items: center;
 }
 .recipeDisplayContainer {
-  height: 80vh;
+  height: 85vh;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -158,7 +158,7 @@
     justify-content: first baseline;
     flex-direction: column;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 10rem;
   }
 
   .recipesFirstHeader {
@@ -310,7 +310,7 @@
     justify-content: first baseline;
     flex-direction: column;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
   }
 
   .recipesFirstHeader {
