@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import styles from "./RecipeDisplay.module.css";
 import { PropTypes } from "prop-types";
 import Spinner from "./Spinner";
+import { useRecipe } from "../Context/RecipesContext";
 
-function RecipeDisplay({ onClickedRecipe }) {
+function RecipeDisplay() {
+  const { clickedRecipe } = useRecipe();
   const [ingredientsList, setIngredientsList] = useState([]);
   const [cookingSteps, setCookingSteps] = useState([]);
   const [recipeImage, setRecipeImage] = useState("");
@@ -12,11 +14,11 @@ function RecipeDisplay({ onClickedRecipe }) {
   useEffect(
     function () {
       async function recipeDisplayIngredients() {
-        if (onClickedRecipe) {
+        if (clickedRecipe) {
           try {
             setIsLoading(true);
             const res = await fetch(
-              `https://api.spoonacular.com/recipes/${onClickedRecipe}/information?apiKey=39e199267dc14acc94501a7d7793d279`
+              `https://api.spoonacular.com/recipes/${clickedRecipe}/information?apiKey=39e199267dc14acc94501a7d7793d279`
             );
             if (!res.ok) {
               throw new Error("Failed to fetch recipes");
@@ -36,7 +38,7 @@ function RecipeDisplay({ onClickedRecipe }) {
 
       recipeDisplayIngredients();
     },
-    [onClickedRecipe]
+    [clickedRecipe]
   );
 
   if (isLoading) {

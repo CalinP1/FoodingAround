@@ -1,82 +1,25 @@
-import { useReducer, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Pagelist from "../components/Pagelist";
 import RecipeDisplay from "../components/RecipeDisplay";
 import RecipesListGeneratedComponent from "../components/RecipesListGeneratedComponent";
 import styles from "./Recipes.module.css";
-
-const initialState = {
-  ingredients: "",
-  calories: "",
-  specialRequest: "",
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "ingredients": {
-      return { ...state, ingredients: action.payload };
-    }
-    case "calories": {
-      return { ...state, calories: action.payload };
-    }
-    case "specialRequest": {
-      return { ...state, specialRequest: action.payload };
-    }
-    case "reset": {
-      return initialState;
-    }
-    default:
-      return state;
-  }
-}
-const BASE_URL =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=39e199267dc14acc94501a7d7793d279&number=50";
+import { useRecipe } from "../Context/RecipesContext";
 
 function Recipes() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const [linkConstruct, setLinkConstruct] = useState(BASE_URL);
-  const [submited, setSubmited] = useState(false);
-  const { ingredients, calories, specialRequest } = state;
-  const [clickedRecipe, setClickedRecipe] = useState();
-  const [wrongSearch, setWrongSearch] = useState(false);
-
-  function createLink() {
-    setLinkConstruct(BASE_URL);
-    let newLink = BASE_URL;
-
-    if (ingredients !== "") {
-      newLink += `&query=${ingredients}`;
-    }
-    if (calories !== "") {
-      newLink += `&maxCalories=${calories}`;
-    }
-    if (specialRequest !== "") {
-      newLink += `&${specialRequest}`;
-    }
-    setLinkConstruct(newLink);
-  }
-  function handleSubmit(e) {
-    setSubmited(true);
-    e.preventDefault();
-    createLink();
-  }
-
-  function handleSelectChange(e) {
-    dispatch({ type: "specialRequest", payload: e.target.value });
-  }
-  function handleIngredientsChange(e) {
-    dispatch({ type: "ingredients", payload: e.target.value });
-  }
-  function handleCaloriesChange(e) {
-    dispatch({ type: "calories", payload: e.target.value });
-  }
-  function reset() {
-    dispatch({ type: "reset" });
-    setSubmited(false);
-    setClickedRecipe(null);
-    setWrongSearch(false);
-  }
+  const {
+    handleSubmit,
+    ingredients,
+    handleIngredientsChange,
+    calories,
+    handleCaloriesChange,
+    specialRequest,
+    handleSelectChange,
+    reset,
+    submited,
+    wrongSearch,
+    clickedRecipe,
+  } = useRecipe();
   return (
     <div>
       <Navbar />
@@ -141,13 +84,7 @@ function Recipes() {
               className={styles.recipeListGeneratorContainer}
               style={{ display: submited ? "block" : "none" }}
             >
-              {submited && !wrongSearch && (
-                <RecipesListGeneratedComponent
-                  linkState={linkConstruct}
-                  setClickedRecipe={setClickedRecipe}
-                  setWrongSearch={setWrongSearch}
-                />
-              )}
+              {submited && !wrongSearch && <RecipesListGeneratedComponent />}
               {submited && wrongSearch && (
                 <div className={styles.containerNoRecipesDisplay}>
                   <p>No recipes found. Please refine your search criteria!</p>
@@ -160,7 +97,7 @@ function Recipes() {
               className={styles.recipeDisplayContainer}
               style={{ display: clickedRecipe ? "block" : "none" }}
             >
-              <RecipeDisplay onClickedRecipe={clickedRecipe} />
+              <RecipeDisplay />
             </div>
           )}
         </div>

@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "./RecipesListGeneratedComponent.module.css";
 import { PropTypes } from "prop-types";
+import { useRecipe } from "../Context/RecipesContext";
 
-function RecipesListGeneratedComponent({
-  linkState,
-  setClickedRecipe,
-  setWrongSearch,
-}) {
+function RecipesListGeneratedComponent() {
+  const { linkConstruct, setClickedRecipe, setWrongSearch } = useRecipe();
   const [recipesObject, setRecipesObject] = useState([]);
   const [invalidSearch, setInvalidSearch] = useState(false);
 
@@ -14,7 +12,7 @@ function RecipesListGeneratedComponent({
     function () {
       async function fetchRecipes() {
         try {
-          const res = await fetch(`${linkState}`);
+          const res = await fetch(`${linkConstruct}`);
           if (!res.ok) {
             throw new Error("Failed to fetch recipes");
           }
@@ -31,7 +29,7 @@ function RecipesListGeneratedComponent({
       }
       fetchRecipes();
     },
-    [linkState, setWrongSearch]
+    [linkConstruct, setWrongSearch]
   );
   if (invalidSearch) {
     return (
