@@ -81,9 +81,9 @@
 }
 .baseSearch {
   height: 5vh;
-  width: 75%;
+  width: 58%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -242,7 +242,7 @@
     height: 8rem;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -388,9 +388,9 @@
   }
   .baseSearch {
     height: 8rem;
-    width: 95%;
+    width: 88%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
