@@ -8,12 +8,13 @@ function Footer() {
           <span>prostean.vasilecalin@gmail.com</span>
         </li>
         <li className={styles.iconlist}>
-          <img src="../../images/linkedin-icon.png" />
-          <span>www.linkedin.com/in/vasile-călin-proștean</span>
-        </li>
-        <li className={styles.iconlist}>
-          <img src="../../images/personal-site-icon.png" />
-          <span>-to-be-done-</span>
+          <a
+            href="https://www.linkedin.com/in/vasile-c%C4%83lin-pro%C8%99tean/"
+            className={styles.iconlist}
+          >
+            <img src="../../images/linkedin-icon.png" />
+            <span>www.linkedin.com/in/vasile-călin-proștean</span>
+          </a>
         </li>
       </ul>
       <img

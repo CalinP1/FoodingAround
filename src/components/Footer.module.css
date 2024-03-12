@@ -36,6 +36,12 @@
   cursor: default;
   height: auto;
 }
+.iconlist a {
+  text-decoration: none;
+  color: var(--main-text);
+  cursor: pointer;
+  font-size: 2rem;
+}
 
 .iconlist img {
   height: 3rem;
@@ -71,6 +77,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .iconlist a {
+    text-decoration: none;
+    color: var(--main-text);
+    cursor: pointer;
+    font-size: 1.5rem;
   }
 }
 @media all and (min-width: 650px) and (max-width: 1550px) {
@@ -116,5 +128,11 @@
   .iconlist img {
     height: 3rem;
     padding-right: 2rem;
+  }
+  .iconlist a {
+    text-decoration: none;
+    color: var(--main-text);
+    cursor: pointer;
+    font-size: 2rem;
   }
 }
