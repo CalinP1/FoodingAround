@@ -10,8 +10,8 @@ FoodingAround is a webpage where you can search for food recipes and wine pairin
             When you click on the recipe, another component will appear where you can find the recipe's ingredient list, a photo of the dish, and a list of cooking steps.
 
 
-Skills: - React.js: * react-router, CSS,  HTML
-                    * context API 
+Skills: - React.js: react-router, context API, CSS,  HTML
+                    
 
 
 Enjoy cooking!
